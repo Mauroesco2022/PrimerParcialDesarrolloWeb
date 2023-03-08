@@ -1,5 +1,4 @@
 import React from 'react'
-import Loterias from './Loterias'
 //import NumeroLoteria from './NumeroLoteria'
 function HomePage() {
   return (

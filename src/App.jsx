@@ -1,34 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import "./App.css";
+import "./Componets/Loterias";
 
-function App() {
-  const [count, setCount] = useState(0)
+export const App = () => {
+  const [categories, setCategories] = useState(0);
+
+  const [value, Setvalue] = useState(3);
+  const [name, Setname] = useState(0);
+  const [Valor, Setvalor] = useState(0);
+
+  const Recorrer = () => {
+    let chontico = { nombreP: name, valueP: value, valorP: Valor };
+  };
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
-}
+    <div>
+      <select name="select" onChange={(e) => Setname(e.target.value)}>
+        <option value="value1">xy</option>
+        <option value="value2">xz</option>
+        <option value="value3">ab</option>
+      </select>
 
-export default App
+      <label for="name">Numero chontico: </label>
+      <input
+        onChange={(e) => Setvalue(e.target.value)}
+        type="text"
+        name="name"
+        required
+        minlength="3"
+        maxlength="4"
+      />
+
+      <label for="name">Valor chontico: </label>
+      <input
+        type="number"
+        name="name"
+        onChange={(e) => Setvalor(e.target.value)}
+      />
+      <br />
+      <button on>Comprar</button>
+    </div>
+  );
+};
+
+export default App;

@@ -1,17 +1,10 @@
 import React from 'react'
 
-const xy = {
-    numero: 10,
-    precio: 100
 
-}
-const yz = {
-    numero: 20,
-    precio: 200
-    
-}
-const ab = {
-    numero: 30,
-    precio: 300
-    
+export default function select(){
+    let options = [{label: "One", value: "one"}, {label: "Two", value: "two"}, {label: "Three", value: "three"}]
+    return (
+    	<Select options={options}
+            defaultValue={{label: "Choose one", value: ""}}></Select>
+    )
 }

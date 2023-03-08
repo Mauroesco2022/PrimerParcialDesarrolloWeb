@@ -7,33 +7,9 @@
     <title>Vite + React</title>
   </head>
   <body>
-    <button onclick="myFunction()">Numero</button>
-
-<script>
-function myFunction() {
-  var num1 = prompt("Ingresa el primer numero");
-  var num2 = prompt("Ingresa el segundo numero");
-  var num3 = prompt("Ingresa el tercer numero");
-  var num4 = prompt("Ingresa el cuarto numero");
 
 
-  alert(Number(num1)+ Number(num2) + Number(num3) + Number(num4));
-}
-</script>
-<button onclick="addNumber()">Añadir número</button>
 
-<script>
-let numbers = [];
-let maxNumbers = 4;
-function addNumber(){
-  if (numbers.length < maxNumbers){
-    let number = prompt("Ingresa un número para añadir");
-    numbers.push(number);
-  } else {
-    alert("No se pueden añadir más números"); 
-  }  
-} 
-</script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
